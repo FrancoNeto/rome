@@ -519,7 +519,12 @@ public class GoogleBaseImpl implements GoogleBase {
     private String gtin;
 
     private String mpn;
-
+    
+    private String title;
+    
+    private String description;
+    
+    private String link;
 
     @Override
     public String[] getActors() {
@@ -1518,7 +1523,36 @@ public class GoogleBaseImpl implements GoogleBase {
     public void setMpn(String mpn) {
         this.mpn = mpn;
     }
+    
+    @Override
+	public String getTitle() {
+		return title;
+	}
 
+	@Override
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	@Override
+	public String getDescription() {
+		return description;
+	}
+
+	@Override
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public String getLink() {
+		return link;
+	}
+
+	@Override
+	public void setLink(String link) {
+		this.link = link;		
+	}
 
     // TODO: Finish
     @Override
@@ -1640,7 +1674,9 @@ public class GoogleBaseImpl implements GoogleBase {
         setGoogleProductCategory(source.getGoogleProductCategory());
         setGtin(source.getGtin());
         setMpn(source.getMpn());
-
+        setTitle(source.getTitle());
+        setDescription(source.getDescription());
+        setLink(source.getLink());
     }
 
     @Override
